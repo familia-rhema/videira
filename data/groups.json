@@ -1,0 +1,34 @@
+{
+  "groups": [
+    {
+      "id": "group-centro-boa-vista",
+      "name": "Centro & Boa Vista",
+      "memberIds": ["user-pedro"],
+      "filter": {
+        "type": "neighborhood",
+        "neighborhoods": ["Centro", "Boa Vista"]
+      },
+      "createdById": "user-rafa"
+    },
+    {
+      "id": "group-feminino",
+      "name": "Acompanhamento feminino",
+      "memberIds": ["user-camila", "user-joao"],
+      "filter": {
+        "type": "gender",
+        "genders": ["feminino"]
+      },
+      "createdById": "user-rafa"
+    },
+    {
+      "id": "group-selecao-manual",
+      "name": "Seleção manual demo",
+      "memberIds": ["user-camila"],
+      "filter": {
+        "type": "manual",
+        "seedIds": ["seed-001", "seed-005", "seed-010", "seed-015"]
+      },
+      "createdById": "user-marcus"
+    }
+  ]
+}

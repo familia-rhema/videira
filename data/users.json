@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "user-rafa",
+      "name": "Rafael Ramos",
+      "email": "rafa@rhema.org.br",
+      "role": "admin"
+    },
+    {
+      "id": "user-marcus",
+      "name": "Marcus Dutra",
+      "email": "marcus@rhema.org.br",
+      "role": "lider"
+    },
+    {
+      "id": "user-ana",
+      "name": "Ana Silva",
+      "email": "ana@rhema.org.br",
+      "role": "lider"
+    },
+    {
+      "id": "user-pedro",
+      "name": "Pedro Costa",
+      "email": "pedro@rhema.org.br",
+      "role": "voluntario"
+    },
+    {
+      "id": "user-camila",
+      "name": "Camila Souza",
+      "email": "camila@rhema.org.br",
+      "role": "voluntario"
+    },
+    {
+      "id": "user-joao",
+      "name": "João Lima",
+      "email": "joao@rhema.org.br",
+      "role": "voluntario"
+    }
+  ]
+}

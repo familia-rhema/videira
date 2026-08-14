@@ -1,0 +1,175 @@
+{
+  "workflows": [
+    {
+      "id": "wf-boas-vindas",
+      "name": "Boas-vindas",
+      "enabled": true,
+      "createdAt": "2026-06-29T12:00:00.000Z",
+      "trigger": {
+        "type": "seed_added"
+      },
+      "blocks": [
+        {
+          "id": "block-1",
+          "type": "message",
+          "text": "Oi tudo bem! Que bom ter te conhecido 😊",
+          "onlyIfNoReply": false
+        },
+        {
+          "id": "block-2",
+          "type": "delay",
+          "days": 1
+        },
+        {
+          "id": "block-3",
+          "type": "message",
+          "text": "Fala mano! Conseguiu ver minha mensagem?",
+          "onlyIfNoReply": true
+        }
+      ]
+    },
+    {
+      "id": "ac3739b9-52d3-4bae-bda4-7a7b44597d16",
+      "createdAt": "2026-06-29T14:11:03.739Z",
+      "name": "Novo fluxo",
+      "enabled": false,
+      "trigger": {
+        "type": "seed_added"
+      },
+      "blocks": [
+        {
+          "id": "8b6626e5-63ae-4ca4-9eab-8f156038449b",
+          "type": "message",
+          "text": "",
+          "onlyIfNoReply": false
+        }
+      ]
+    },
+    {
+      "id": "ff6d0ec2-16ad-4537-aded-b1225c5d86aa",
+      "createdAt": "2026-06-30T20:08:23.089Z",
+      "name": "Novo fluxo",
+      "enabled": false,
+      "trigger": {
+        "type": "seed_added"
+      },
+      "blocks": [
+        {
+          "id": "2542ac92-d1b1-47d0-98a9-258afd03ea3d",
+          "type": "message",
+          "text": "",
+          "onlyIfNoReply": false
+        }
+      ]
+    },
+    {
+      "id": "cc8c94a2-69f8-469c-b334-9678878816b1",
+      "createdAt": "2026-07-12T23:12:36.332Z",
+      "name": "Novo fluxo",
+      "enabled": false,
+      "trigger": {
+        "type": "seed_added"
+      },
+      "blocks": [
+        {
+          "id": "c2bdae17-5f5f-4f6c-b9c8-6f5ce2ab7385",
+          "type": "message",
+          "text": "",
+          "onlyIfNoReply": false
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "a239bb89-4ed1-41b1-84c2-737ff49810f1",
+      "workflowId": "wf-boas-vindas",
+      "seedId": "85329fd3-60b5-469e-903d-6be71517648f",
+      "status": "completed",
+      "cursor": 3,
+      "nextDueAt": null,
+      "lastTaskAt": "2026-06-30T18:32:01.628Z",
+      "repliedAt": null,
+      "startedAt": "2026-06-29T14:12:37.144Z"
+    },
+    {
+      "id": "1ec587d8-b07c-48ff-8eaf-a6850f286b7d",
+      "workflowId": "wf-boas-vindas",
+      "seedId": "1bf61802-65d1-46be-911d-0d814739f0aa",
+      "status": "completed",
+      "cursor": 2,
+      "nextDueAt": null,
+      "lastTaskAt": "2026-06-29T14:12:41.393Z",
+      "repliedAt": "2026-06-29T14:13:00.393Z",
+      "startedAt": "2026-06-29T14:12:41.393Z"
+    },
+    {
+      "id": "b0237249-e034-4b21-9217-7954110bf361",
+      "workflowId": "wf-boas-vindas",
+      "seedId": "b52d98b2-ef26-48c6-a758-3168e7586a06",
+      "status": "completed",
+      "cursor": 3,
+      "nextDueAt": null,
+      "lastTaskAt": "2026-07-02T21:02:45.701Z",
+      "repliedAt": null,
+      "startedAt": "2026-06-30T20:00:03.772Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1d6576e8-7ce0-4b30-aa77-964788b2828d",
+      "seedId": "85329fd3-60b5-469e-903d-6be71517648f",
+      "workflowRunId": "a239bb89-4ed1-41b1-84c2-737ff49810f1",
+      "message": "Oi tudo bem! Que bom ter te conhecido 😊",
+      "status": "done",
+      "dueAt": "2026-06-29T14:12:37.144Z",
+      "createdAt": "2026-06-29T14:12:37.144Z",
+      "completedAt": "2026-06-29T14:13:03.452Z",
+      "assigneeId": "user-marcus"
+    },
+    {
+      "id": "9165fdd7-ae4f-48e5-87ad-5bc8529d4b35",
+      "seedId": "1bf61802-65d1-46be-911d-0d814739f0aa",
+      "workflowRunId": "1ec587d8-b07c-48ff-8eaf-a6850f286b7d",
+      "message": "Oi tudo bem! Que bom ter te conhecido 😊",
+      "status": "done",
+      "dueAt": "2026-06-29T14:12:41.393Z",
+      "createdAt": "2026-06-29T14:12:41.393Z",
+      "completedAt": "2026-06-29T14:13:00.393Z",
+      "assigneeId": "user-marcus"
+    },
+    {
+      "id": "3c8a8ef5-8b9a-4693-ac4a-105da1ea53d9",
+      "seedId": "85329fd3-60b5-469e-903d-6be71517648f",
+      "workflowRunId": "a239bb89-4ed1-41b1-84c2-737ff49810f1",
+      "message": "Fala mano! Conseguiu ver minha mensagem?",
+      "status": "pending",
+      "dueAt": "2026-06-30T18:32:01.628Z",
+      "createdAt": "2026-06-30T18:32:01.628Z",
+      "completedAt": null,
+      "assigneeId": "user-marcus"
+    },
+    {
+      "id": "d2d518e3-4cf3-404b-814d-1faae88df139",
+      "seedId": "b52d98b2-ef26-48c6-a758-3168e7586a06",
+      "workflowRunId": "b0237249-e034-4b21-9217-7954110bf361",
+      "message": "Oi tudo bem! Que bom ter te conhecido 😊",
+      "status": "pending",
+      "dueAt": "2026-06-30T20:00:03.772Z",
+      "createdAt": "2026-06-30T20:00:03.772Z",
+      "completedAt": null,
+      "assigneeId": "user-marcus"
+    },
+    {
+      "id": "1d1accd8-84ee-4039-a88c-7ecce215a6e6",
+      "seedId": "b52d98b2-ef26-48c6-a758-3168e7586a06",
+      "workflowRunId": "b0237249-e034-4b21-9217-7954110bf361",
+      "message": "Fala mano! Conseguiu ver minha mensagem?",
+      "status": "pending",
+      "dueAt": "2026-07-02T21:02:45.701Z",
+      "createdAt": "2026-07-02T21:02:45.701Z",
+      "completedAt": null,
+      "assigneeId": "user-marcus"
+    }
+  ]
+}
