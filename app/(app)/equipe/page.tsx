@@ -1,5 +1,6 @@
 import * as Divider from '@/components/ui/divider';
 import { UsersSection } from '@/components/equipe/users-section';
+import { CreateUserForm } from '@/components/equipe/create-user-form';
 import { GroupsSection } from '@/components/equipe/groups-section';
 import { getSessionUser } from '@/lib/auth/session';
 import { isAdmin, requireAdminOrLider } from '@/lib/access';
@@ -35,6 +36,22 @@ export default async function EquipePage() {
       </div>
 
       <UsersSection users={users} canEditRoles={isAdmin(currentUser)} />
+
+      {isAdmin(currentUser) ? (
+        <>
+          <Divider.Root variant='line-spacing' />
+          <div className='space-y-3'>
+            <div>
+              <h2 className='text-label-sm text-text-strong-950'>Criar conta</h2>
+              <p className='mt-1 text-paragraph-sm text-text-sub-600'>
+                Admin/líder entram com email e senha. Voluntário entra com CPF e data de
+                nascimento.
+              </p>
+            </div>
+            <CreateUserForm />
+          </div>
+        </>
+      ) : null}
 
       <Divider.Root variant='line-spacing' />
 

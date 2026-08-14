@@ -1,3 +1,4 @@
+import { randomUUID } from 'crypto';
 import { promises as fs } from 'fs';
 import path from 'path';
 import type { User, UserRole } from '@/lib/types/seed';
@@ -25,6 +26,24 @@ export async function listUsers(): Promise<User[]> {
 export async function getUserById(id: string): Promise<User | undefined> {
   const users = await listUsers();
   return users.find((user) => user.id === id);
+}
+
+export async function findUserByEmail(email: string): Promise<User | undefined> {
+  const users = await listUsers();
+  return users.find((user) => user.email.toLowerCase() === email.toLowerCase());
+}
+
+export async function findUserByCpf(cpf: string): Promise<User | undefined> {
+  const users = await listUsers();
+  return users.find((user) => user.cpf === cpf);
+}
+
+export async function createUser(input: Omit<User, 'id'>): Promise<User> {
+  const store = await readStore();
+  const user: User = { ...input, id: randomUUID() };
+  store.users.push(user);
+  await writeStore(store);
+  return user;
 }
 
 export async function updateUserRole(userId: string, role: UserRole): Promise<User> {

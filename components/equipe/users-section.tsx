@@ -92,7 +92,7 @@ export function UsersSection({ users, canEditRoles }: UsersSectionProps) {
                         {user.name}
                       </p>
                       <p className='truncate text-paragraph-xs text-text-soft-400'>
-                        {user.email}
+                        {user.email || user.cpf}
                       </p>
                     </div>
                   </div>

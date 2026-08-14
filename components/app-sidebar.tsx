@@ -17,7 +17,7 @@ import {
 import * as CompactButton from '@/components/ui/compact-button';
 import * as Divider from '@/components/ui/divider';
 import { SporosLogo } from '@/components/sporos-logo';
-import { UserSwitcher } from '@/components/user-switcher';
+import { UserMenu } from '@/components/user-menu';
 import { isAdminOrLider } from '@/lib/roles';
 import type { User } from '@/lib/types/seed';
 import { cn } from '@/utils/cn';
@@ -45,10 +45,9 @@ const VOLUNTARIO_NAV_ITEMS: NavItem[] = [
 
 type AppSidebarProps = {
   currentUser: User;
-  users: User[];
 };
 
-export function AppSidebar({ currentUser, users }: AppSidebarProps) {
+export function AppSidebar({ currentUser }: AppSidebarProps) {
   const pathname = usePathname();
   const navItems = isAdminOrLider(currentUser)
     ? ADMIN_LIDER_NAV_ITEMS
@@ -110,7 +109,7 @@ export function AppSidebar({ currentUser, users }: AppSidebarProps) {
 
       <div className='flex flex-col gap-3'>
         <Divider.Root variant='line-spacing' />
-        <UserSwitcher currentUser={currentUser} users={users} />
+        <UserMenu currentUser={currentUser} />
       </div>
     </aside>
   );

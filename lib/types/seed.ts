@@ -20,6 +20,11 @@ export type User = {
   name: string;
   email: string;
   role: UserRole;
+  /** Admin/líder: hash da senha (login por email+senha). */
+  passwordHash?: string;
+  /** Voluntário: login por CPF (11 dígitos, sem pontuação) + data de nascimento. */
+  cpf?: string;
+  dataNascimento?: string;
 };
 
 export const SEED_GENDER_LABELS = {

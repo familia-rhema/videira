@@ -4,13 +4,23 @@
       "id": "user-rafa",
       "name": "Rafael Ramos",
       "email": "rafa@rhema.org.br",
-      "role": "admin"
+      "role": "admin",
+      "passwordHash": "0771e9fb09e6877ca3b46dd60100d5dc:02063cd948c33de889adb891334dcdac30f6356c4857acc18e9249d04cdaead3dbe0e12e115fae03b52f4e833d9de9170b15460a1b688d7c9929793a0425505a"
+    },
+    {
+      "id": "user-matheus",
+      "name": "Matheus Ramos",
+      "email": "matheus@rhema.org.br",
+      "role": "lider",
+      "passwordHash": "73b66256d6776764054c2fe52081b83d:b0f3c9dc023409d9568a2caa42ab20deee992e4c232ad737aa0f34d6f9ae3184eb5db9192923983db1ac52816c5514ad10927dd411b1495fc186a4aa58859c07"
     },
     {
       "id": "user-marcus",
       "name": "Marcus Dutra",
-      "email": "marcus@rhema.org.br",
-      "role": "lider"
+      "email": "",
+      "role": "voluntario",
+      "cpf": "11111111111",
+      "dataNascimento": "1990-01-01"
     },
     {
       "id": "user-ana",
