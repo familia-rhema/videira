@@ -15,7 +15,7 @@ import {
   findSeedByPhone,
 } from '@/lib/store/seeds';
 import { isValidPhone } from '@/lib/phone';
-import { getSessionUser } from '@/lib/auth/session';
+import { getSessionUser, getPublicActor } from '@/lib/auth/session';
 import { RHEMA_TOTAL_AULAS } from '@/lib/types/turma';
 
 export type TurmaActionState = {
@@ -183,7 +183,7 @@ export async function publicEnrollAction(
 
   try {
     // Deduplicação por telefone: reaproveita a semente existente.
-    const currentUser = await getSessionUser();
+    const currentUser = await getPublicActor();
     const existing = await findSeedByPhone(phone);
     const seed =
       existing ??
